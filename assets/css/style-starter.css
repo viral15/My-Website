@@ -164,16 +164,16 @@ body {
     width: 100%;
 }
 .graph-two{
-  width: 100px;
+  width: 336px;
   position: absolute;
-  left: 447px;
-  bottom: 6px
+  left: 143px;
+  bottom: -25px
 }
 .graph-three{
-  width: 100px;
+  width: 53px;
   position: absolute;
   left: 447px;
-  bottom: 6px
+  bottom: -28px
 }
 .slide-three button{
     background: linear-gradient(to right, #0c5ce3, #0c5ce3);
