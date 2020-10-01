@@ -24,6 +24,8 @@
     position: relative;
     display: inline-block; 
     margin: 50px;
+    
+    
 }
 .card1 .img-top {
     display: none;
@@ -33,7 +35,11 @@
     z-index: 99;
 }
 .card1:hover .img-top {
-    display: inline;
+    display:inline;
+    opacity: 1;
 }
 
+.card1:hover .img-bottom {
+  display:inline;
+  opacity: 0;
   /* card 2=====================================================================================================*/

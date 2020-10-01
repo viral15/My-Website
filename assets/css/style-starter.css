@@ -7891,7 +7891,8 @@ a.text-dark:hover, a.text-dark:focus {
   content: ""; }
 
 .fa-twitter-square:before {
-  content: ""; }
+  content: "";
+background-color: #fff; }
 
 .fa-facebook-square:before {
   content: ""; }
@@ -10953,7 +10954,7 @@ div#small-dialog iframe {
   line-height: 25px; }
 
 .w3l-footer h6.footer-title-29 {
-  color: var(--title-color);
+  color: #fff;
   font-size: 20px;
   line-height: 25px;
   text-transform: capitalize;
@@ -10975,7 +10976,7 @@ div#small-dialog iframe {
         font-weight: normal;
         font-size: 16px;
         /*color: var(--text-color);*/
-        color :#224f77;
+        color :#fff;
         font-family: 'Open Sans', sans-serif;
     }
 
@@ -11022,9 +11023,8 @@ div#small-dialog iframe {
 .w3l-footer .footer-list-29 ul li span.fa {
     width: 30px;
     margin-top: 4px;
-    /*color: var(--text-color);*/
-    color: #fb3406;
-    opacity: .4;
+    color: var(--secondary-color);
+    
 }
 
 .w3l-footer .main-social-footer-29 a:last-child {
@@ -11036,7 +11036,7 @@ div#small-dialog iframe {
     font-size: 14px;
     line-height: 25px;
     /*color: var(--text-color);*/
-    color: #224f77;
+    color: #fff;
 }
 
 .w3l-footer .footer-list-29 p {
@@ -11900,4 +11900,11 @@ button.owl-next {
   .w3l-contact .contact-grids textarea {
     font-size: 16px; } }
 
+    div.a {
+      text-align: center;
+    }
+  .backg{
+    background-image: linear-gradient(to bottom, #5b54f8, #6b61f5, #796ef2, #867bef, #9287eb, #8f84de, #8b81d2, #887ec5, #766cae, #645a97, #534981, #42396b);
+  }
 /*# sourceMappingURL=style-starter.css.map */
+/*===================================================================*/
