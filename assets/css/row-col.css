@@ -42,4 +42,52 @@
 .card1:hover .img-bottom {
   display:inline;
   opacity: 0;
-  /* card 2=====================================================================================================*/
+}
+
+
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+  /* start plus and minus button =====================================================================================================*/
+  span {cursor:pointer; }
+  .number{
+    margin:0px;
+  }
+  .minus, .plus{
+    width:23px;
+    height:42px;
+    background:#f2f2f2;
+    border-radius:4px;
+    padding:8px 5px 8px 5px;
+    border:1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  }
+  input{
+    height:34px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
+    
+
+  /* End plus and minus button =====================================================================================================*/
+
+  
