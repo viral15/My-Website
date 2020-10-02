@@ -77,7 +77,7 @@ img.vert-move {
     vertical-align: middle;
     text-align: center;
   }
-  input{
+  .input{
     height:34px;
     width: 100px;
     text-align: center;
@@ -86,8 +86,25 @@ img.vert-move {
     border-radius:4px;
     display: inline-block;
     vertical-align: middle;
+  }
     
 
   /* End plus and minus button =====================================================================================================*/
 
-  
+  .boxFont{
+    font-family: Georgia, serif;
+    font-size: 24px;
+    letter-spacing: 0.8px;
+    word-spacing: 1.8px;
+    color: #090759;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    }
+
+    p.ex {
+      color: #fff;
+      font-size: medium;
+    }
