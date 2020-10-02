@@ -188,73 +188,70 @@
                 <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-                <a href="#">Service 1</a>
-                <a href="#">Service 2</a>
-                <a href="#">Service 3</a>
+                <a href="#">Packing with Moving</a>
+                <a href="#">Local Moving</a>
+                <a href="#">Interstate Moving</a>
             </div>
         </div>
         <a href="#about"><!--<i class="fa fa-user">--></i>About</a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
+    <!--JS for stick Manubar start=================================================================================-->
+
+    <!--JS for stick Manubar End===================================================================================-->
 
   
     
     <!--============================================================================================================-->
     
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-color=#fff;">
+        <h2 class="a" style="padding: 42px 518px;font-weight: bold;color: #00315f;"> SELECT BOX SIZE </h2>
                 <div class="row">
             <div class="col-md-12" style="text-align: center;">
-                <h2 class="a"style="padding: 80px 80px;"> Box size Selection </h2>
+                
             </div>
-        </div>
+        </div> 
     
-        <div class="row"> 
-            <div class="col-md-3">
-                
-                <div class="card1">
-                    <img type="img" src="/assets/images/bw11.png" alt="Card1 Back" style="width:143% " style="text-align: center;" class="img-bottom" style="align-items: center;">
-                    
-                    <img type="img" src="/assets/images/color11.png" class="img-top" style="text-align: center;" alt="Card1 Front" style="width:143%">
-                                        
-                </div> 
-                <h6 style="text-align: center;">first point</h6>
-                
-
-            </div>
-            <div class="col-md-3">
-                
-                <div class="card1">
-                    <img type="img" src="/assets/images/bw11.png" alt="Card1 Back" style="width:143% " style="object-position: center;"class="img-bottom" style="align-items: center;">
-                    
-                    <img type="img" src="/assets/images/color11.png" class="img-top" style="object-position: center;" alt="Card1 Front" style="width:143%">
-                                        
-                </div>
-                <h6 style="text-align: center;">first point</h6> 
-
-            </div>
-            <div class="col-md-3">
-                
-                <div class="card1">
-                    <img type="img" src="/assets/images/bw11.png" alt="Card1 Back" style="width:143% "style="object-position: center;"class="img-bottom" style="align-items: center;">
-                    
-                    <img type="img" src="/assets/images/color11.png" class="img-top" style="object-position: center;" alt="Card1 Front" style="width:143%">
-                                        
-                </div> 
-                <h6 style="text-align: center;">first point</h6>
-
-            </div>
-            <div class="col-md-3">
-                
-                <div class="card1">
-                    <img type="img" src="/assets/images/bw11.png" alt="Card1 Back" style="width:143% " style="object-position: center;"class="img-bottom" style="align-items: center;">
-                    
-                    <img type="img" src="/assets/images/color11.png" class="img-top" style="object-position: center;" alt="Card1 Front" style="width:143%">
-                                        
-                </div>
-                <h6 style="text-align: center;">first point</h6> 
-
+          
+        
+        <div class="row1"> 
+            <div class="column1" style="margin-left:222px;">
+    
+             <div class="card1">
+                <img src="/assets/images/bw truck with one mover.png" alt="Card1 Back" style="width:143%" class="img-bottom">
+                <img src="/assets/images/truck with one mover.png" class="img-top" alt="Card1 Front" style="width:143%">
+              </div> 
+              <h6 style="font-size: 1rem; margin-left: 34px; text-align: center;">Moving With Packing</h6> 
             </div>
             
+            <div class="column1">
+    
+                <div class="card1" style="margin-left:128px;">
+                   <img src="/assets/images/bw12.png" alt="Card1 Back" style="width:65%" class="img-bottom">
+                   <img src="/assets/images/color12.png" class="img-top" alt="Card1 Front" style="width:65%">
+                   
+                 </div>
+                 <h6 style="font-size: 1rem;margin-left: 121px; */text-align: center;">Hourly Costing</h6>  
+               </div>
+                  
+               
+        </div>
+             
+        <div class="row1"> 
+            <div class="column1" style="margin-left:222px;">
+    
+              <h6 style="font-size: 1rem; margin-left: 34px; text-align: center;">Moving With Packing</h6> 
+            
+            
+            <div class="column1">
+    
+                <h6 style="font-size: 1rem;margin-left: 121px; */text-align: center;">Hourly Costing</h6>  
+               </div>
+                  
+               
+        </div>   
+
+
     </div>
     </div>
 
@@ -442,6 +439,27 @@
         }
     </script>
     <!--navbar js script end-->
+    <!--Plus and minus button start===================================================================================-->
+    <script>
+        $(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 0 ? 0 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+    </script>
+    <!--Plus and minus button End=====================================================================================-->
+
 
 </body>
 
