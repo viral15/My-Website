@@ -43,6 +43,51 @@
   display:inline;
   opacity: 0;
 }
+/*Card2 start-=====================================================================================================*/
+
+.column2 {
+  float: left;
+  /*width: 33.33%; */
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 80px;
+}
+/* card 2====================================================================================================*/
+.card2 {
+  width: 245px;
+  height: 102px;
+  position: relative;
+  display: inline-block; 
+  margin: 50px;
+  
+  
+}
+.card2 .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.card2:hover .img-top {
+  display:inline;
+  opacity: 1;
+}
+
+.card2:hover .img-bottom {
+display:inline;
+opacity: 0;
+}
+
+
 
 
 img.vert-move {
