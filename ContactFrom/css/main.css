@@ -148,7 +148,7 @@ iframe {
 .wrap-contact100 {
   width: 550px;
   background: transparent;
-  padding: 50px 0px 160px 0px;
+  padding: 50px 0px 54px 0px;
   margin-right: 62px;
   margin-left: -103px;
 }
@@ -349,7 +349,7 @@ textarea.input1001 {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 31px;
-  background-color: #827ffe;
+  background-color: #00315f;
   pointer-events: none;
   
   -webkit-transition: all 0.4s;
