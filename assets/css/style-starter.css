@@ -179,6 +179,64 @@ body {
     background: linear-gradient(to right, #0c5ce3, #0c5ce3);
 }
 
+@media screen and (max-width: 600px) {
+    .img-box {
+        width: 300px;
+        position: relative;
+    }
+
+    .graph-one {
+        width: 100%;
+    }
+
+    .graph-two {
+        width: 100px;
+        position: absolute;
+        left: 300px;
+        bottom: 6px
+    }
+
+    .graph-three {
+        width: 55px;
+        position: absolute;
+        left: 380px;
+        bottom: 6px
+    }
+    /*.img-one {
+        width: 50%;
+    }
+
+    .img-two {
+        width: 26px;
+        position: absolute;
+        left: 301px;
+        bottom: 2px
+    }
+
+    .img-three {
+        width: 83px;
+        position: absolute;
+        left: 25px;
+        bottom: 1px
+    }
+    .pic-one {
+        width: 119%;
+    }
+
+    .pic-two {
+        width: 160px;
+        position: absolute;
+        left: 45px;
+        bottom: 1px
+    }
+
+    .pic-three {
+        width: 55px;
+        position: absolute;
+        left: 541px;
+        bottom: 2px
+    }*/
+}
 /* Slider End==============================================================================================================*/
 
 hr {
