@@ -1,0 +1,31 @@
+
+
+/* Box styles */
+.myBox {
+border: none;
+/* padding: 5px; */
+
+width: 300px;
+height: 300px;
+overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid rgb(49, 172, 188); 
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: rgb(60, 50, 205);
+border-radius: 10px;
+} 
+
+::-webkit-scrollbar-thumb:hover {
+background: #050b64;  
+} 
