@@ -56,4 +56,19 @@ table {
     text-align: left;
     padding: 16px;
   }
-  
+
+  tr {
+    opacity: 0.7;
+    filter:grayscale(100%);
+  }
+
+  .sibling-hover:hover {
+     
+    opacity: 1;
+    
+    }
+   
+  #txts:hover {
+    filter:grayscale(0%);
+  }
+ 
