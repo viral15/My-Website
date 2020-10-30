@@ -23,16 +23,21 @@ body {font-family: "Lato", sans-serif;} */
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
+  filter:grayscale(100%);
+  opacity: 0.7;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
+  filter:grayscale(50%);
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
   background-color: #ccc;
+  filter:grayscale(0%);
+  opacity: 1;
 }
 
 /* Style the tab content */
