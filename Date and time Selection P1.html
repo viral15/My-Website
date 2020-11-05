@@ -1,49 +1,55 @@
-﻿<!doctype html>
-<html lang="en">
+﻿<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Worksmar a Corporate Category Bootstrap Responsive Website Template - Home :: W3layouts</title>
 
     <!-- Google online fonts -->
-    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link  type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" >
+    <link  type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" >
+    <link  type="text/css" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" >
+
     <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/row-col.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="ContactFrom\css\main.css">
-    <link rel="stylesheet" href="ContactFrom\css\util.css">
+    <!-- rel="stylesheet" -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style-starter.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/row-col.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="\ContactFrom\css\main.css">
+    <link rel="stylesheet" type="text/css" href="/ContactFrom/css/util.css">
+    <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!-- <link rel="icon" type="image/png" href="/images/icons/favicon.ico" /> -->
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link  type="text/css" href="/ContactFrom/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link  type="text/css" href="/ContactFrom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link type="text/css" href="/ContactFrom/vendor/animate/animate.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link  type="text/css" href="/ContactFrom/vendor/css-hamburgers/hamburgers.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link  type="text/css" href="/ContactFrom/vendor/animsition/css/animsition.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link  type="text/css" href="/ContactFrom/vendor/select2/select2.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link  type="text/css" href="/ContactFrom/vendor/daterangepicker/daterangepicker.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="/ContactFrom/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/ContactFrom/css/main.css">
     <!--===============================================================================================-->
     <!--Slider-------------------------------------------------------------------------------------------
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Slider End=====================================================================================-->
+    Slider End=====================================================================================-->
 
     <style>
         body {
@@ -204,98 +210,57 @@
 
     <!--============================================================================================================-->
 
-    <div class="container-fluid" style="background-image: linear-gradient(to bottom, #a8ccf8, #87c2ea, #65b7da, #41acc5, #16a1ae);">
-        <h2 class="a" style="padding: 42px 421px;font-weight: bold;color: #00315f;"> SELECT BEDROOM IN HOUSE </h2>
-                <div class="row">
-            <div class="col-md-12" style="text-align: center;">
-
-            </div>
+    <!-- <div class="container-fluid" style="background-color=#fff;"></div> -->
+    <!--Date and time picker Start=======================================================================================================-->
+    <h2 class="a" style="padding: 42px 437px;font-weight: bold;color: #00315f;"> SELECT PICKUP DATE & TIME</h2>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">            
         </div>
+    </div> 
 
+        <div class="container mt-5 mb-5" style="width: 400px;margin-left: 37%;">
+            <input type="text" id="picker" class="form-control">            
+        </div>
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="jquery.datetimepicker.full.min.js"></script>
+        <script>
+
+            $('#picker').datetimepicker({ 
+                timepicker: true,
+                datepicker: true,
+                format: 'y-m-d H:mm',
+                //value: '2019-8-1 09:30',
+                hours12: false,
+                step: 30,
+                yearstart: 2020,
+                yearEnd: 3050,
+                inline: true, 
+                startDate: '+1d',              
+                minDate: '+1970/01/02',   //disable past date                   
+                //maxDate: '+1M',
+                allowTimes:['07:00', '08:00', '09:00', '10:00', '11:00 - 13:00', '12:00 - 14:00', '13:00', '14:00', '15:00', '16:00', '17:00']
+                               
+                
+            })
+
+            
+        </script>
+    <!--Date and time picker End=======================================================================================================-->
         <div class="row">
-            <div class="col-md-6">
-
-
-                <img class="vert-move" type="img" src=".\assets\images\no of bedroom.png" style="width: 86%;margin-bottom: 8px;margin-left: 34px;margin-top: 0px;">
-
-               </div>
-
-            <div class="col-md-6">
-                <div class="row" style="margin-top: 69px;">
-                    <!-- <div class="col-md-8">
-                        <p class="ex" style="margin-left: 138px; margin-top: 10px; margin-bottom: 10px;">Box Small (40 X 30 X 30 cm)</p>
-                    </div>
-                    <div class="col-md-4 number">
-                        <span class="minus">-</span>
-                        <input type="text" value="0" style="width: 30px; text-align: center;"/>
-                        <span class="plus">+</span>
-
-                    </div> -->
-
-                    <div class="col-md-8">
-                        <a href=".\How far truck park.html">
-                          <button class="contact100-form-btn" style="margin-left: 278px;margin-top: 56px;width: 240px;height: 45px;">
-                            <span>
-                                <!-- <i class="fa fa-cutlery m-r-6" aria-hidden="true"></i> -->
-                                1 - 2  BEDROOM 
-                            </span>
-                          </button>
-                        </a>
-
-                    </div>
-
-                   
-                    <div class="col-md-8" style="margin-top: -42px;">
-                        <a href=".\How far truck park.html">
-                            <button class="contact100-form-btn" style="margin-left: 278px; margin-top: 56px; width: 240px;height: 45px;">
-                                <span>
-                                    <!-- <i class="fa fa-bed m-r-6" aria-hidden="true"></i> -->
-                                    3 - 4  BEDROOM
-                                </span>
-                            </button>
-                        </a>
-                    </div>
-
-                    <!-- <div class="col-md-8">
-                        <p class="ex" style="margin-left: 138px; margin-top: 10px; margin-bottom: 10px;">Box large (60 X 45 X 45 cm)</p>
-                    </div>
-                    <div class="col-md-4 number">
-                        <span class="minus">-</span>
-                        <input type="text" value="0" style="width: 30px; text-align: center;"/>
-                        <span class="plus">+</span>
-
-                    </div> -->
-
-                    <div class="col-md-8" style="margin-top: -42px;">
-                        <a href=".\How far truck park.html">
-                        <button class="contact100-form-btn" style="margin-left: 278px; margin-top: 56px; width: 240px;height: 45px;">
-                            <span>
-                                <!-- <i class="fa fa-bath m-r-6" aria-hidden="true"></i> -->
-                                5 +  BEDROOM
-                            </span>
-                        </button>
-                        </a>
-                    </div>
-
-                   
-                                      
-                </div>
-
-
+            <div class="col=md-12">
+                <a href=".\Type of Pickup Location P1.html">
+                <button class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;">
+                    <span>
+                        <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                        NEXT
+                    </span>
+                </button>
+                </a>
             </div>
-
-
         </div>
-
-        
-        
-    </div>
-
-
-
-
-
-
 
     <!--End Image Box=============================================================================================-->
 
@@ -424,8 +389,9 @@
         })
     </script>
     <!-- //script for teams1-->
-
-    <script>
+   
+    
+    <!--<script>
 
 
 
@@ -462,7 +428,7 @@
                 mainClass: 'my-mfp-slide-bottom'
             });
         });
-    </script>
+    </script>-->
     <!--navbar js script start-->
     <script>
         function myFunction() {
@@ -474,6 +440,7 @@
             }
         }
     </script>
+
     <!--navbar js script end-->
     <!--Plus and minus button start===================================================================================-->
     <script>
@@ -494,6 +461,7 @@
 			});
 		});
     </script>
+
     <!--Plus and minus button End=====================================================================================-->
 
 
