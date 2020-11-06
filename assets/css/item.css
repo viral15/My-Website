@@ -77,4 +77,7 @@ table {
   #txts:hover {
     filter:grayscale(0%);
   }
- 
+
+  /* .green{
+     filter: grayscale(0%);   
+}  */
