@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="ContactFrom\css\main.css">
     <link rel="stylesheet" href="ContactFrom\css\util.css">
+    <link rel="stylesheet" href="assets\css\loginfom.css">
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
     <!--===============================================================================================-->
@@ -271,161 +272,46 @@
     <!--JS for stick Manubar start=================================================================================-->
 
     <!--JS for stick Manubar End===================================================================================-->
-
-  
-    
-    <!--============================================================================================================-->
-    
-    <div class="container-fluid" style="background-color=#fff;">
-        <h2 class="a" style="padding: 42px 501px;font-weight: bold;color: #00315f;"> DO YOU NEED HELP</h2>
-                <div class="row">
-            <div class="col-md-12" style="text-align: center;">
+    <div class='box'>
+        <div class='box-form'>
+          <div class='box-login-tab'></div>
+          <div class='box-login-title'>
+            <div class='i i-login'></div><h2 style="margin-top: 13px;">LOGIN</h2>
+          </div>
+          <div class='box-login'>
+            <div class='fieldset-body' id='login_form'>
+              <button onclick="openLoginInfo();" class='b b-form i i-more' title='Mais Informações'></button>
+              <p class='field'>
+                <label for='user'>E-MAIL</label>
+                <input type='text' id='user' name='user' title='Username' />
+                <span id='valida' class='i i-warning'></span>
+              </p>
+              <p class='field'>
+                <label for='pass'>PASSWORD</label>
+                <input type='password' id='pass' name='pass' title='Password' />
+                <span id='valida' class='i i-close'></span>
+              </p>              
                 
+      
+              <input type='submit' id='do_login' value='GET STARTED' title='Get Started' />
             </div>
-        </div> 
-    
+          </div>
+        </div>
+        <div class='box-info'>
+          <p><button onclick="closeLoginInfo();" class='b b-info i i-left' title='Back to Sign In'></button><h3>Need Help?</h3>
+          </p>
+          <div class='line-wh'></div>
+          <button onclick="" class='b-support' title='Forgot Password?'> Forgot Password?</button>
+          <button onclick="" class='b-support' title='Contact Support'> Contact Support</button>
+          <div class='line-wh'></div>
           
-        
-        <div class="row1"> 
-            <div class="column1" style="margin-left:394px;">
-    
-            <a href=".\Date and time Selection P1.html"><div class="card1" style="margin-left: 15px;">
-                <img src="./assets/images/bw truck with one mover.png" alt="Card1 Back" style="width:143%" class="img-bottom">
-                <img src="./assets/images/truck with one mover.png" class="img-top" alt="Card1 Front" style="width:143%">
-              </div>
-              </a>             
-            </div>
-            
-            <div class="column1">
-    
-                 <a href=".\Date and time Selection P1.html"><div class="card1" style="margin-left:172px;">
-                   <img src="/assets/images/bw truck with two mover.png" alt="Card1 Back" style="width:111%" class="img-bottom">
-                   <img src="/assets/images/truck with two mover.png" class="img-top" alt="Card1 Front" style="width:111%">
-                   
-                 </div>
-                 </a>                
-               </div>
-                  
-               
         </div>
-             
-        <div class="row1"> 
-            <div class="column1" style="margin-left:222px;">
-    
-                <h6 style="font-size: 1rem;margin-left: 170px;text-align: center;margin-top: -122px;">Truck With One Mover</h6>
-            </div>
-            
-            
-            <div class="column1">
-    
-                <h6 style="font-size: 1rem;margin-left: 172px;margin-top: -122px; */text-align: center;">Truck With Two Mover</h6>  
-               </div>
-              
-               
-               
-        </div>
-        
-        <div class="row">
-            <div class="col=md-12">
-                <button class="contact100-form-btn" style="margin-left: 607px; margin-top: -112px;">
-                    <span>
-                        <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                        NEXT
-                    </span>
-                </button>
-                
-            </div>
-        </div>
-         
-    </div>
-    </div>
-
-       
-            
-
-       
-           
-           
+      </div>
+  
     <!--End Image Box=============================================================================================-->
 
     <!-- footer ------------------------------------------------------------------------------------------->
-    <footer class="w3l-footer">
-        <div class="footer-29 py-5" style="background-color: #00315F;">
-            <div class="container pb-lg-3">
-                <div class="row footer-top-29">
-                    <div class="col-md-6 footer-list-29 footer-1 mt-md-4">
-                        <h6 class="footer-title-29">Contact Us</h6>
-                        <ul>
-                            <li>
-                                <span class="fa fa-map-marker"></span>
-                                <p> my address, Nr, xyz location , Suite 300 San Francisco, <br>CA 94104, Australia</p>
-                            </li>
-                            <li>
-                                <span class="fa fa-phone"></span>
-                                <a href="tel:+44 11 222 33"> +44 11 222 33</a>
-                            </li>
-                            <li>
-                                <span class="fa fa-envelope-open-o"></span>
-                                <a href="mailto:mailid@mail.com" class="mail">
-                                    mailid@mail.com
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="main-social-footer-29">
-                            <a href="#javascript;" class="facebook"><span class="fa fa-facebook"></span></a>
-                            <a href="#javascript;" class="twitter"><span class="fa fa-twitter"></span></a>
-                            <a href="#javascript;" class="instagram"><span class="fa fa-instagram"></span></a>
-                            <a href="#javascript;" class="google-plus"><span class="fa fa-google-plus"></span></a>
-                            <a href="#javascript;" class="linkedin"><span class="fa fa-linkedin"></span></a>
-                        </div>
-                    </div>
 
-                    <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
-                        <h6 class="footer-title-29">Subscribe email notification</h6>
-                        <p>Get update our notification for best offer and new upcoming features .</p>
-                        <form action="#" method="post" class="rightside-form mt-4">
-                            <input type="email" name="email" placeholder="Enter your email">
-                            <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
-                        </form>
-                        </ul>
-                    </div>
-                </div>
-                <!--<div class="row bottom-copies">
-
-                    <ul class="list-btm-29 col-lg-5 text-lg-right text-center">-->
-                        <!--<li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li> -->
-                    <!--</ul>
-                </div>-->
-            </div>
-        </div>
-        <!-- move top -->
-        <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
-            <span class="fa fa-angle-up"></span>
-        </button>
-        <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function () {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("movetop").style.display = "block";
-                } else {
-                    document.getElementById("movetop").style.display = "none";
-                }
-            }
-
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
-        <!-- /move top -->
-    </footer>
     <!-- // footer -->
     <!-- jQuery -->
     <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
@@ -526,23 +412,62 @@
     <!--navbar js script end-->
     <!--Plus and minus button start===================================================================================-->
     <script>
-        $(document).ready(function() {
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 0 ? 0 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
-		});
+                $(document).ready(function() {
+            $("#do_login").click(function() { 
+            closeLoginInfo();
+            $(this).parent().find('span').css("display","none");
+            $(this).parent().find('span').removeClass("i-save");
+            $(this).parent().find('span').removeClass("i-warning");
+            $(this).parent().find('span').removeClass("i-close");
+            
+                var proceed = true;
+                $("#login_form input").each(function(){
+                    
+                    if(!$.trim($(this).val())){
+                        $(this).parent().find('span').addClass("i-warning");
+                    $(this).parent().find('span').css("display","block");  
+                        proceed = false;
+                    }
+                });
+            
+                if(proceed) //everything looks good! proceed...
+                {
+                    $(this).parent().find('span').addClass("i-save");
+                    $(this).parent().find('span').css("display","block");
+                }
+            });
+            
+            //reset previously results and hide all message on .keyup()
+            $("#login_form input").keyup(function() { 
+                $(this).parent().find('span').css("display","none");
+            });
+        
+        openLoginInfo();
+        setTimeout(closeLoginInfo, 1000);
+        });
+
+        function openLoginInfo() {
+            $(document).ready(function(){ 
+            $('.b-form').css("opacity","0.01");
+            $('.box-form').css("left","-37%");
+            $('.box-info').css("right","-37%");
+            });
+        }
+
+        function closeLoginInfo() {
+            $(document).ready(function(){ 
+            $('.b-form').css("opacity","1");
+            $('.box-form').css("left","0px");
+            $('.box-info').css("right","-5px"); 
+            });
+        }
+
+        $(window).on('resize', function(){
+            closeLoginInfo();
+        });
     </script>
+
+
     <!--Plus and minus button End=====================================================================================-->
 
 
