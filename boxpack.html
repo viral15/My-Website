@@ -49,25 +49,30 @@
         body {
             margin: 0;
             font-family: Arial
-        } xm,
-       
-        
-        .topnav {
-            overflow: hidden;
-            background-image: linear-gradient(to bottom, #86b8f3, #87acec, #8aa1e4, #8e94da, #9288cf);
         }
 
-            .topnav a {
+        .topnav {
+            overflow: hidden;
+            /* background-color: #007bff; */
+            background-image: linear-gradient(to bottom, #b8d1d5, #c0d7da, #c7dddf, #cfe3e5, #d7e9ea, #d7e9ea, #d7e9ea, #d7e9ea, #cfe3e5, #c7dddf, #c0d7da, #b8d1d5);
+            position: sticky;
+            top: 0;
+            z-index: 99999;
+            width: 100%;
+        }
+  
+        .topnav a {
                 float: right;
                 display: block;
-                color: #f2f2f2;
+                color: #8c5d18;
                 text-align: center;
                 padding: 16px 18px;
                 text-decoration: none;
-                font-size: 17px;
+                font-size: 16px;
+                font-family:'DIN Next';
             }
 
-       /* .active {
+        /* .active {
             background-color: #4CAF50;
             color: white;
         }*/
@@ -82,16 +87,17 @@
             padding-top: 3px;
         }
 
-            .dropdown .dropbtn {
-                font-size: 17px;
-                border: none;
-                outline: none;
-                color: white;
-                padding: 14px 16px;
-                background-color: inherit;
-                font-family: inherit;
-                margin: 0;
-                font-weight: 600;
+        .dropdown .dropbtn {
+                float: right;
+                display: block;
+                color: #8c5d18;
+                text-align: center;
+                padding: 16px 18px;
+                text-decoration: none;
+                font-size: 16px;
+                font-family:'DIN Next';
+                margin-top:-4px;
+                
             }
 
         .dropdown-content {
@@ -104,7 +110,7 @@
             margin-top: 58px;
         }
 
-            .dropdown-content a {
+        .dropdown-content a {
                 float: none;
                 color: black;
                 padding: 12px 16px;
@@ -114,8 +120,8 @@
             }
 
         .topnav a:hover, .dropdown:hover .dropbtn {
-            background-color: #555;
-            color: white;
+            background-image: linear-gradient(to bottom, #afafaf, #b7b7b7, #bfbfbf, #c7c7c7, #cfcfcf, #cfcfcf, #cfcfcf, #cfcfcf, #c7c7c7, #bfbfbf, #b7b7b7, #afafaf);
+            color: black;
         }
 
         .dropdown-content a:hover {
@@ -136,6 +142,7 @@
                 float: right;
                 display: block;
             }
+
             .dropdown-content {
                 margin-top: 0px;
             }
@@ -172,29 +179,94 @@
                     text-align: left;
                 }
         }
-        
+
+        @media screen and (max-width: 400px) {
+            .topnav {
+                overflow: hidden;
+                /* background-color: #007bff; */
+                background-image: linear-gradient(to bottom, #86b8f3, #87acec, #8aa1e4, #8e94da, #9288cf);
+                position: fixed;
+                top: 0;
+                z-index: 99999;
+                width: 73%;
+            }
+
+            .mainresponsivtop {
+                width: 73% !important;
+            }
+
+            .topnav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+
+            .dropdown-content {
+                margin-top: 0px;
+            }
+
+            .topnav.responsive {
+                position: relative;
+                width:100%!important;
+            }
+
+                .topnav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+
+                .topnav.responsive .dropdown {
+                    float: none;
+                }
+
+                .topnav.responsive .dropdown-content {
+                    position: relative;
+                }
+
+                .topnav.responsive .dropdown .dropbtn {
+                    display: block;
+                    width: 73% !important;
+                    text-align: left;
+                }
+        }
     </style>
 </head>
 <body>
-   
-        <!--<img src="assets/images/logo.jpg">-->
-    <div class="topnav" id="myTopnav">        
-        <a href="#home" class="active"><!--<i class="fa fa-home">--></i>Home</a>
-        <a href="#news"><!--<i class="fa fa-newspaper-o">--></i>News</a>
-        <a href="#contact"><!--<i class="fa fa-phone">--></i>Contact</a>
-        <div class="dropdown">
-            <a class="dropbtn">
-                Services
-                <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="#">Packing with Moving</a>
-                <a href="#">Local Moving</a>
-                <a href="#">Interstate Moving</a>
+
+    <!--<img src="assets/images/logo.jpg">-->
+    <div class="w3-container" style="overflow: hidden;background-color: #F8F5EE;position: fixed;top: 0;z-index: 99999;width: 100%;height: 75px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);">
+        <div class="topnav mainresponsivtop" id="myTopnav" style="width: 429px;margin-left: 33%;border-radius: 20px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);height: 55px;">
+            <!-- <img src="assets/images/logo5.svg" style="height: 60px; width: 100px;"> -->
+            <a href="#home" class="active" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Login</a>
+            <a href="#news" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Contact</a>
+            <a href="#contact" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Movers</a>
+            <div class="dropdown" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">
+                <a class="dropbtn">
+                    Services
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href=".\movers with truck.html">Packing + Moving + Unpacking</a>
+                    <a href=".\movers with truck.html">Hoverly Moving</a>
+                    <a href=".\Fixed price Moving.html">Fixed price moving</a>
+                    <a href=".\Packing+Moving.html">Packing +Moving</a>
+                    <a href=".\one Mover.html">One Mover</a>
+                    <a href=".\movers with truck P1.html">Interstate Moving</a>
+                </div>
             </div>
+            <a href=".\index.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Home</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick=" myFunction();">&#9776;</a>
         </div>
-        <a href="#about"><!--<i class="fa fa-user">--></i>About</a>
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <!--JS for stick Manubar start=================================================================================-->
 
