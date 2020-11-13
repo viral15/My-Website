@@ -15,12 +15,40 @@ Author URL: http://w3layouts.com
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/row-col.css">
+    
     <!-- <link rel="stylesheet" href="assets/css/loginfom.css"> -->
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">-->
     <link rel="stylesheet" href="ContactFrom\css\main.css">
     <link rel="stylesheet" href="ContactFrom\css\util.css">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    <!--===============================================================================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDUwg4TuzipDzwEZkycG1iTgJfijwj_mbc"></script>
+    <script>
+    var searchInput = 'search_input';
+
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+            types: ['geocode'],
+        });
+        
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+            var near_place = autocomplete.getPlace();
+            document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+            document.getElementById('loc_long').value = near_place.geometry.location.lng();
+            
+            document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+            document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+        });
+    });
+    $(document).on('change', '#'+searchInput, function () {
+    document.getElementById('loc_lat').value = '';
+    document.getElementById('loc_long').value = '';
+	
+    document.getElementById('latitude_view').innerHTML = '';
+    document.getElementById('longitude_view').innerHTML = '';
+    });
+    </script>
     <!--Slider------------------------------------------------------------------------------------------->
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -571,7 +599,7 @@ Author URL: http://w3layouts.com
 
     <!--End Image Box=============================================================================================-->
     <!---inquiry form------------------------------------------------------------------------------------------->
-    <!--mt-lg-0 mt-5 about-right-faq-->
+        <!--mt-lg-0 mt-5 about-right-faq-->
 
     <div class="container-contact100">
         <div class="col-lg-7 content-photo mt-lg-0 mt-5">
@@ -624,7 +652,9 @@ Author URL: http://w3layouts.com
 
 
                 <div class="wrap-input1001 validate-input" data-validate="Please enter Your Pickup Address ">
-                    <textarea class="input1001" name="Pickup address" placeholder="Your Pickup address" required></textarea>
+                    <input type="text" id="search_input" class="input1001" name="Pickup address" placeholder="Your Pickup address" required>
+                    <input type="hidden" id="loc_lat">
+                    <input type="hidden" id="loc_long">
                     <span class="focus-input1001"></span>
                 </div>
 
@@ -682,6 +712,26 @@ Author URL: http://w3layouts.com
 
         gtag('config', 'UA-23581568-13');
     </script>
+
+    <script>
+        var searchInput = 'search_input';
+        
+        $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        types: ['geocode'],
+        /*componentRestrictions: {
+        country: "USA"
+        }*/
+        });
+        
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var near_place = autocomplete.getPlace();
+        });
+        });
+    </script>
+
+    
 
     <!-- footer ------------------------------------------------------------------------------------------->
     <footer class="w3l-footer">
