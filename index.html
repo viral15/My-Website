@@ -22,7 +22,8 @@ Author URL: http://w3layouts.com
     <link rel="stylesheet" href="ContactFrom\css\util.css">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDUwg4TuzipDzwEZkycG1iTgJfijwj_mbc"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUwg4TuzipDzwEZkycG1iTgJfijwj_mbc&libraries=places&callback=initMap"></script>
     <script>
     var searchInput = 'search_input';
 
@@ -34,16 +35,16 @@ Author URL: http://w3layouts.com
         
         google.maps.event.addListener(autocomplete, 'place_changed', function () {
             var near_place = autocomplete.getPlace();
-            document.getElementById('loc_lat').value = near_place.geometry.location.lat();
-            document.getElementById('loc_long').value = near_place.geometry.location.lng();
+            document.getElementById('latitude_input').value = near_place.geometry.location.lat();
+            document.getElementById('longitude_input').value = near_place.geometry.location.lng();
             
             document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
             document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
         });
     });
     $(document).on('change', '#'+searchInput, function () {
-    document.getElementById('loc_lat').value = '';
-    document.getElementById('loc_long').value = '';
+    document.getElementById('latitude_input').value = '';
+    document.getElementById('longitude_input').value = '';
 	
     document.getElementById('latitude_view').innerHTML = '';
     document.getElementById('longitude_view').innerHTML = '';
@@ -255,14 +256,15 @@ Author URL: http://w3layouts.com
 <body>
 
     <!--<img src="assets/images/logo.jpg">-->
-    <div class="w3-container" style="overflow: hidden;background-color: #F8F5EE;position: fixed;top: 0;z-index: 99999;width: 100%;height: 75px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);">
-        <div class="topnav mainresponsivtop" id="myTopnav" style="width: 429px;margin-left: 33%;border-radius: 20px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);height: 55px;">
+    <div class="w3-container" style="overflow: hidden;background-color: #F8F5EE;position: fixed;top: 0;z-index: 99999;width: 100%;height: 75px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);">        
+        <div class="topnav mainresponsivtop" id="myTopnav" style="width: 685px;margin-left: 340px;border-radius: 10px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);height: 50px;">
             <!-- <img src="assets/images/logo5.svg" style="height: 60px; width: 100px;"> -->
-            <a href=".\Login form for Client.html" class="active" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Login</a>
-            <a href="#news" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Contact</a>
-            <a href=".\Login form for Mover.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Movers</a>
-            <div class="dropdown" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">
-                <a class="dropbtn">
+            
+            <a href=".\Login form for Client.html" class="active" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Login</a>
+            <a href="#news" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Contact</a>
+            <a href=".\Login form for Mover.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Movers</a>
+            <div class="dropdown" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">
+                <a class="dropbtn" style="width: 136px;">
                     Services
                     <i class="fa fa-caret-down"></i>
                 </a>
@@ -275,8 +277,15 @@ Author URL: http://w3layouts.com
                     <a href=".\movers with truck P1.html">Interstate Moving</a>
                 </div>
             </div>
-            <a href=".\index.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;">Home</a>
+            <a href=".\index.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Home</a>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick=" myFunction();">&#9776;</a>
+        </div>
+        <div style="margin-top: -30px;margin-left: 1138px;">
+        <a href="#javascript;" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#javascript;" class="twitter" style="margin-left: 15px;"><i class="fa fa-twitter"></i></a>
+        <a href="#javascript;" class="instagram" style="margin-left: 15px;"><i class="fa fa-instagram"></i></a>
+        <a href="#javascript;" class="google-plus" style="margin-left: 15px;"><i class="fa fa-google-plus"></i></a>
+        <a href="#javascript;" class="linkedin" style="margin-left: 15px;"><i class="fa fa-linkedin"></i></a>
         </div>
     </div>
 
@@ -517,84 +526,71 @@ Author URL: http://w3layouts.com
     </script>
     <!-- scripts -->
     <!--Start Image Box=============================================================================================-->
-    <div class="row1">
-        <div class="column1" style="margin-left:275px;">
-
+    <div class="grid-container" style="margin-bottom: 64px;">
+        <div class="grid-item" style="margin-left: 186px;height: 192px;width: 242px;border-radius: 30px;-webkit-box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);">
             <a href=".\movers with truck.html"><div class="card1">
-                <img src=".\assets\images\bw moving + packing + unpacking.png" alt="Card1 Back" style="width:143%" class="img-bottom">
-                <img src=".\assets\images\Color moving + packing + unpacking.png" class="img-top" alt="Card1 Front" style="width:143%">
+                <!-- <img src=".\assets\images\bw moving + packing + unpacking.png" alt="Card1 Back" style="width:143%" class="img-bottom"> -->
+                <img src=".\assets\images\Color moving + packing + unpacking.png" style="width:143%;margin-left: -34px;margin-top: -35px;">
+                <h6 style="font-size: 1rem; margin-left: -19px; text-align: center;">Packing + Moving<br>+ Unpacking</h6>
             </div>
             </a>
-            <h6 style="font-size: 1rem; margin-left: 34px; text-align: center;">Packing + Moving<br>+ Unpacking</h6>
+            
         </div>
-
-        <div class="column1">
-
+        <div class="grid-item" style="width: 242px;height: 192px;border-radius: 30px;-webkit-box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);">
             <a href=".\movers with truck.html"><div class="card1" style="margin-left:128px;">
-                <img src=".\assets\images\bw12.png" alt="Card1 Back" style="width:65%" class="img-bottom">
-                <img src=".\assets\images\color12.png" class="img-top" alt="Card1 Front" style="width:65%">
+                <!-- <img src=".\assets\images\bw12.png" alt="Card1 Back" style="width:65%" class="img-bottom"> -->
+                <img src=".\assets\images\color12.png" style="width:65%;margin-left: -178px;margin-top: -44px;">
+                <h6 style="font-size: 1rem;margin-left: 121px;margin-left: -180px;margin-top: 8px; */text-align: center;">Hourly Moving</h6>
 
             </div>
             </a>
 
-            <h6 style="font-size: 1rem;margin-left: 121px; */text-align: center;">Hourly Moving</h6>
         </div>
-
-        <div class="column1">
-
-             <a href=".\Fixed price Moving.html"><div class="card1">
-                <img src=".\assets\images\bw13.png" alt="Card1 Back" style="width:109%" class="img-bottom">
-                <img src=".\assets\images\color13.png" class="img-top" alt="Card1 Front" style="width:109%">
-
+        <div class="grid-item" style="margin-right: 147px;width: 242px;height: 192px;border-radius: 30px;-webkit-box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);">
+            <a href=".\Fixed price Moving.html"><div class="card1">
+                <!-- <img src=".\assets\images\bw13.png" alt="Card1 Back" style="width:109%" class="img-bottom"> -->
+                <img src=".\assets\images\color13.png" style="width:109%;margin-top: -42px;margin-left: -3px;">
+                <h6 style="font-size: 1rem;margin-left: -20px;text-align: center;margin-top: 15px;">Fixed Price Moving</h6>
             </div>
             </a>
-            <h6 style="font-size: 1rem;margin-left: -4px;text-align: center;">Fixed Price Moving</h6>
+            
         </div>
 
-        <div class="column1">
 
-        </div>
-    </div>
-
-
-    <div class="row1">
-        <div class="column1" style="margin-left:275px;">
-
+        <div class="grid-item" style="margin-left: 186px;height: 192px;width: 242px;border-radius: 30px;-webkit-box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);">
             <a href=".\Packing+Moving.html"><div class="card1">
-                <img src=".\assets\images\bw11.png" alt="Card1 Back" style="width:143%" class="img-bottom">
-                <img src=".\assets\images\color11.png" class="img-top" alt="Card1 Front" style="width:143%">
+                <!-- <img src=".\assets\images\bw11.png" alt="Card1 Back" style="width:143%" class="img-bottom"> -->
+                <img src=".\assets\images\color11.png" style="width:133%;margin-left: -34px;margin-top: -35px;">
+                <h6 style="font-size: 1rem; margin-left: -40px; text-align: center;">Packing + Moving</h6>
             </div>
-            </a>
-            <h6 style="font-size: 1rem; margin-left: 34px; text-align: center;">Packing + Moving</h6>
+            </a>            
         </div>
 
-        <div class="column1">
+        
+        <div class="grid-item" style="width: 242px;height: 192px;border-radius: 30px;-webkit-box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);">
+            <a href=".\one Mover.html"><div class="card1" style="margin-left:128px;">
+                <!-- <img src="./assets/images/bw truck with one mover.png" alt="Card1 Back" style="width:126%" class="img-bottom"> -->
+                <img src="./assets/images/truck with one mover.png" style="width:138%;margin-left: -178px;margin-top: -42px;">
+                <h6 style="font-size: 1rem;margin-left: 121px;margin-left: -180px;margin-top: 9px; */text-align: center;">One Mover</h6>
 
-            <a href=".\one Mover.html"><div class="card1" style="margin-left:93px;">
-                <img src="./assets/images/bw truck with one mover.png" alt="Card1 Back" style="width:126%" class="img-bottom">
-                <img src="./assets/images/truck with one mover.png" class="img-top" alt="Card1 Front" style="width:126%">
 
             </div>
-            </a>
-            <h6 style="font-size: 1rem;margin-left: 121px; */text-align: center;">One Mover</h6>
+            </a>            
         </div>
 
-        <div class="column1">
 
+        <div class="grid-item" style="margin-right: 147px;width: 242px;height: 192px;border-radius: 30px;-webkit-box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);box-shadow: 8px 13px 23px -7px rgba(0,0,0,0.99);">
             <a href=".\movers with truck P1.html">
-                <div class="card1" style="margin-left: 73px;">
-                    <img src=".\assets\images\bw14.png" alt="Card1 Back" style="width:145%" class="img-bottom">
-                    <img src=".\assets\images\color14.png" class="img-top" alt="Card1 Front" style="width:145%">
-
+                <div class="card1">
+                    <!-- <img src=".\assets\images\bw14.png" alt="Card1 Back" style="width:145%" class="img-bottom"> -->
+                    <img src=".\assets\images\color14.png" style="width:134%;margin-top: -42px;margin-left: -21px;">
+                    <h6 style="font-size: 1rem;margin-left: -20px;text-align: center;margin-top: 9px;">Interstate Moving</h6>
                 </div>
             </a>
-            <h6 style="font-size: 1rem;margin-left: 69px;text-align: center;">Interstate Moving</h6>
-        </div>
-
-        <div class="column1">
-
-        </div>
-    </div>
+            
+        </div>  
+        
+      </div>
 
 
     <!--End Image Box=============================================================================================-->
@@ -602,103 +598,119 @@ Author URL: http://w3layouts.com
         <!--mt-lg-0 mt-5 about-right-faq-->
 
     <div class="container-contact100">
-        <div class="col-lg-7 content-photo mt-lg-0 mt-5">
-            <img src=".\assets\images\Inquiry.png" class="img-fluid" alt="main image">
-        </div>
+        <div class="row">
+            <div class="col-lg-6 content-photo mt-lg-0 mt-5">
+                <img src=".\assets\images\Inquiry.png" class="img-fluid" alt="main image">
+            </div>
 
-        <div class="wrap-contact100">
-            <form class="contact100-form validate-form">
-                <span class="contact100-form-title">
-                    Inquiry for Service
+            <div class="col-lg-6 wrap-contact100">
+                <form class="contact100-form validate-form">
+                    <span class="contact100-form-title">
+                        Inquiry for Service
 
-                </span>
+                    </span>
+                    
+                    <div class="row">
 
-
-
-                <div class="wrap-input100 validate-input" data-validate="Please enter your First name">
-                    <input class="input100" type="text" name="First name" placeholder="Full Name" required>
-                    <span class="focus-input100"></span>
-                </div>
-
-                <!--<div class="wrap-input100 validate-input" data-validate="Please enter your Last name">
-                  <input class="input100" type="text" name="Last name" placeholder="Last Name" required>
-                  <span class="focus-input100"></span>
-                </div>-->
-
-                <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                    <input class="input100" type="email" name="email" placeholder="E-mail" required>
-                    <span class="focus-input100"></span>
-                </div>
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please enter your First name">
+                            <input class="input100" type="text" name="First name" placeholder="Full Name" required>
+                            <span class="focus-input100"></span>
+                        </div>
 
 
-                <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
-                    <input class="input100" type="number" name="phone" placeholder="+61 Phone" required>
-                    <span class="focus-input100"></span>
-                </div>
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
+                            <input class="input100" type="email" name="email" placeholder="E-mail" required>
+                            <span class="focus-input100"></span>
+                        </div>
 
 
-                <div class="wrap-input100 validate-input" data-validate="Please Select Service">
-                    <input class="input100" type="text" name="Select Service" list="Select Service" placeholder="Select Service" required>
-                    <span class="focus-input100"></span>
-                    <datalist id="Select Service">
-                        <option value="Packing With Shifting"><!--</option>-->
-                        <option value="Local Shifting"><!--</option>-->
-                        <option value="Interstate Shifting"><!--</option>-->
-                    </datalist>
-
-                </div>
-
-                <!------------------------------------------------------------------------------------------->
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please enter your phone">
+                            <input class="input100" type="number" name="phone" placeholder="+61 Phone" required>
+                            <span class="focus-input100"></span>
+                        </div>
 
 
-                <div class="wrap-input1001 validate-input" data-validate="Please enter Your Pickup Address ">
-                    <input type="text" id="search_input" class="input1001" name="Pickup address" placeholder="Your Pickup address" required>
-                    <input type="hidden" id="loc_lat">
-                    <input type="hidden" id="loc_long">
-                    <span class="focus-input1001"></span>
-                </div>
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Service">
+                            <input class="input100" type="text" name="Select Service" list="Select Service" placeholder="Select Service" required>
+                            <span class="focus-input100"></span>
+                            <datalist id="Select Service">
+                                <option value="Packing With Shifting">
+                                <option value="Local Shifting">
+                                <option value="Interstate Shifting">
+                            </datalist>
 
-                <div class="wrap-input100 validate-input" data-validate="Please Select Time">
-                    <input class="input100" id="zip" type="number" name="zip" placeholder="Pickup Address Zip Code" required>
-                    <span class="focus-input100"></span>
-                </div>
+                        </div>
 
-                <div class="wrap-input1001 validate-input" data-validate="Please enter Your Drop off Address ">
-                    <textarea class="input1001" name="Drop off address" placeholder="Your Drop off address" required></textarea>
-                    <span class="focus-input1001"></span>
-                </div>
+                        <!------------------------------------------------------------------------------------------->
 
-                <div class="wrap-input100 validate-input" data-validate="Please Select Time">
-                    <input class="input100" id="zip" type="number" name="zip" placeholder="Drop off Address Zip Code" required>
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Please Select Date">
+                        
 
 
-                    <!--<form action="/action_page.php">
-                    </form>-->
-                    <input class="input100" type="datetime-local" name="Select Date" placeholder="Select Date" required>
-                    <span class="focus-input100"></span>
-                </div>
+                        <!-- <div class="wrap-input1001 validate-input" data-validate="Please enter Your Pickup Address ">
+                            <input type="text" id="search_input" class="input1001 pac-target-input" name="Pickup address" placeholder="Your Pickup address" required="" style="height: 43px;">
+                            <input type="hidden" id="latitude_input">
+                            <input type="hidden" id="longitude_input">
+                            <span class="focus-input1001"></span>
+                        </div> -->
 
-                <div class="wrap-input100 validate-input" data-validate="Please enter your Comment">
-                    <textarea class="input100" name="Comments" placeholder="Your Comments" required></textarea>
-                    <span class="focus-input100"></span>
-                </div>
+                        <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Pickup Address">
+                            <input class="input100" type="text" id="search_input" name="Your Pickup address" placeholder="Your Pickup address" required>
+                            <input type="hidden" id="latitude_input">
+                            <input type="hidden" id="longitude_input">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">
+                            <input class="input100" id="zip" type="number" name="zip" placeholder="Pickup Address Zip Code" required>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Dropoff Address">
+                            <input class="input100" type="text" id="search_input" name="Your Dropoff address" placeholder="Your Dropoff address" required>
+                            <input type="hidden" id="latitude_input">
+                            <input type="hidden" id="longitude_input">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <!-- <div class="wrap-input1001 validate-input" data-validate="Please enter Your Drop off Address ">
+                            <textarea class="input1001" name="Drop off address" placeholder="Your Drop off address" required></textarea>
+                            <span class="focus-input1001"></span>
+                        </div> -->
+
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">
+                            <input class="input100" id="zip" type="number" name="zip" placeholder="Dropoff Address Zip Code" required>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Date">
+
+
+                            <!--<form action="/action_page.php">
+                            </form>-->
+                            <input class="input100" type="datetime-local" name="Select Date" placeholder="Select Date" required>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter your Comment">
+                            <textarea class="input100" name="Comments" placeholder="Your Comments" required></textarea>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                    </div>
 
 
 
 
-                <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                        <span>
-                            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                            Send
-                        </span>
-                    </button>
-                </div>
-            </form>
+                    <div class="container-contact100-form-btn">
+                        <button class="contact100-form-btn">
+                            <span>
+                                <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                                Send
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <div id="dropDownSelect1"></div>
