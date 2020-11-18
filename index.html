@@ -21,10 +21,18 @@ Author URL: http://w3layouts.com
     <link rel="stylesheet" href="ContactFrom\css\main.css">
     <link rel="stylesheet" href="ContactFrom\css\util.css">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUwg4TuzipDzwEZkycG1iTgJfijwj_mbc&libraries=places&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3pRT_Hq6V-pQ0u_oTRSTekaORj7JFfZM&libraries=places&callback=initMap"></script>
     <script>
+
+    let placeSearch;
+      let autocomplete;
+      const componentForm = {
+        zip: "short_name",
+      };
+
     var searchInput = 'search_input';
 
     $(document).ready(function () {
@@ -661,7 +669,7 @@ Author URL: http://w3layouts.com
                         </div>
 
                         <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">
-                            <input class="input100" id="zip" type="number" name="zip" placeholder="Pickup Address Zip Code" required>
+                            <input disabled="true" class="input100 field" id="zip" type="number" name="zip" placeholder="Pickup Address Zip Code" required>
                             <span class="focus-input100"></span>
                         </div>
 
