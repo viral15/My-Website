@@ -11973,14 +11973,51 @@ button.owl-next {
   
     padding: 10px;
   }
+
+  .grid-container-mover-with-truck {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: auto auto;
   
-  .grid-item {
+    padding: 10px;
+  }
+  
+  .grid-container-fixed-price-moving {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: auto auto auto auto;
+  
+    padding: 10px;
+  }
+
+  /* .grid-item {
+    transition: box-shadow .6s;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+  } */
+  
+
+  .object-item {
+    transition: box-shadow .6s;
+    transition: transform .6s;
+    background-image: linear-gradient(to bottom, #39989b, #35a6aa, #2eb5b9, #23c4c8, #0dd3d8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    
   }
+  .object-item:hover {
+    box-shadow: 0px 0px 15px 5px rgba(50, 50, 50, 0.75); 
+    transform: scale(1.1);
+  }
+
+
 /*# sourceMappingURL=style-starter.css.map */
 /*===sticky hader start================================================================*/
 
