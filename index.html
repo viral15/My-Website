@@ -172,6 +172,8 @@ Author URL: http://w3layouts.com
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             margin-top: 58px;
+            border-radius: 11px;
+            margin-left: -52px;
         }
 
         .dropdown-content a {
@@ -323,12 +325,12 @@ Author URL: http://w3layouts.com
                     <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="dropdown-content" style="margin-top: 47px;">
-                    <a href=".\movers with truck.html">Packing + Moving + Unpacking</a>
-                    <a href=".\movers with truck.html">Hourly Moving</a>
+                    <a href=".\Pickup Address.html">Packing + Moving + Unpacking</a>
+                    <a href=".\Pickup Address.html">Hourly Moving</a>
                     <a href=".\Fixed price Moving.html">Fixed price moving</a>
                     <a href=".\Packing+Moving.html">Packing +Moving</a>
                     <a href=".\one Mover.html">One Mover</a>
-                    <a href=".\movers with truck P1.html">Interstate Moving</a>
+                    <a href=".\Pickup Address P1.html">Interstate Moving</a>
                 </div>
             </div>
             <a href=".\index.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Home</a>
@@ -582,7 +584,7 @@ Author URL: http://w3layouts.com
     <!--Start Image Box=============================================================================================-->
     <div class="grid-container" style="margin-bottom: 64px;">
         <div class="object-item" style="width: 242px; margin-left: 186px; height: 192px;border-radius: 15px;">
-            <a href=".\movers with truck.html"><div class="card1">
+            <a href=".\Pickup Address.html"><div class="card1">
                 <!-- <img src=".\assets\images\bw moving + packing + unpacking.png" alt="Card1 Back" style="width:143%" class="img-bottom"> -->
                 <img src=".\assets\images\Color moving + packing + unpacking.png" style="width:143%;margin-left: -34px;margin-top: -35px;">
                 <div style="font-size: 1.5rem; margin-left: -19px; text-align: center;color: #fff;">Packing + Moving<br>+ Unpacking</div>
@@ -591,7 +593,7 @@ Author URL: http://w3layouts.com
             
         </div>
         <div class="object-item" style="width: 242px;height: 192px;border-radius: 15px;">
-            <a href=".\movers with truck.html"><div class="card1" style="margin-left:128px;">
+            <a href=".\Pickup Address.html"><div class="card1" style="margin-left:128px;">
                 <!-- <img src=".\assets\images\bw12.png" alt="Card1 Back" style="width:65%" class="img-bottom"> -->
                 <img src=".\assets\images\color12.png" style="width:65%;margin-left: -178px;margin-top: -44px;">
                 <div style="font-size: 1.5rem;margin-left: 121px;margin-left: -180px;margin-top: 8px; color: #fff; */text-align: center;">Hourly Moving</div>
@@ -634,7 +636,7 @@ Author URL: http://w3layouts.com
 
 
         <div class="object-item" style="margin-right: 147px;width: 242px;height: 192px;border-radius: 15px;">
-            <a href=".\movers with truck P1.html">
+            <a href=".\Pickup Address P1.html">
                 <div class="card1">
                     <!-- <img src=".\assets\images\bw14.png" alt="Card1 Back" style="width:145%" class="img-bottom"> -->
                     <img src=".\assets\images\color14.png" style="width:134%;margin-top: -42px;margin-left: -21px;">
@@ -667,25 +669,25 @@ Author URL: http://w3layouts.com
                     <div class="row">
 
                         <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please enter your First name">
-                            <input class="input100" type="text" name="First name" placeholder="Full Name" required>
+                            <input class="input100" type="text" name="First name" placeholder="Full Name">
                             <span class="focus-input100"></span>
                         </div>
 
 
                         <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                            <input class="input100" type="email" name="email" placeholder="E-mail" required>
+                            <input class="input100" type="email" name="email" placeholder="E-mail">
                             <span class="focus-input100"></span>
                         </div>
 
 
                         <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please enter your phone">
-                            <input class="input100" type="number" name="phone" placeholder="+61 Phone" required>
+                            <input class="input100" type="number" name="phone" placeholder="+61 Phone">
                             <span class="focus-input100"></span>
                         </div>
 
 
                         <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Service">
-                            <input class="input100" type="text" name="Select Service" list="Select Service" placeholder="Select Service" required>
+                            <input class="input100" type="text" name="Select Service" list="Select Service" placeholder="Select Service">
                             <span class="focus-input100"></span>
                             <datalist id="Select Service">
                                 <option value="Packing With Shifting">
@@ -707,7 +709,7 @@ Author URL: http://w3layouts.com
                             <span class="focus-input1001"></span>
                         </div> -->
 
-                        <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Pickup Address">
+                        <!-- <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Pickup Address">
                             <input class="input100" type="text" id="autocomplete" name="Your Pickup address" placeholder="Your Pickup address" onFocus="geolocate()" required>
                             
                             <span class="focus-input100"></span>
@@ -716,8 +718,8 @@ Author URL: http://w3layouts.com
                       
                             <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">                                
                                 <input class="input100" disabled="true" id="postal_code" name="postal_code" placeholder="Pickup Address Zip Code">
-                                <!-- <span class="focus-input100"></span> -->                                
-                            </div>
+                               <span class="focus-input100"></span> -->                                
+                            </div> 
                         
                         <!--Start Hidden Table for address pickup===========================================================================================-->
 
@@ -760,21 +762,21 @@ Author URL: http://w3layouts.com
                         </table>
                         <!--End Hidden Table for address pickup===========================================================================================-->
 
-                        <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Dropoff Address">
+                        <!-- <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Dropoff Address">
                             <input class="input100" type="text" id="autocomplete1" name="Your Dropoff address" placeholder="Your Dropoff address" onFocus="geolocate()" required>
 
                             <span class="focus-input100"></span>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="wrap-input1001 validate-input" data-validate="Please enter Your Drop off Address ">
                             <textarea class="input1001" name="Drop off address" placeholder="Your Drop off address" required></textarea>
                             <span class="focus-input1001"></span>
                         </div> -->
 
-                        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">
+                        <!-- <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">
                             <input class="input100" disabled="true" id="postal_code1" name="postal_code1" placeholder="Dropoff Address Zip Code" required>
-                            <!-- <span class="focus-input100"></span> -->
-                        </div>
+                            
+                        </div> -->
 
                         <!--Start Hidden Table for address pickup===========================================================================================-->
 
@@ -822,32 +824,32 @@ Author URL: http://w3layouts.com
 
                             <!--<form action="/action_page.php">
                             </form>-->
-                            <input class="input100" type="datetime-local" name="Select Date" placeholder="Select Date" required>
+                            <input class="input100" type="datetime-local" name="Select Date" placeholder="Select Date" style="margin-left: -12px;width: 231px;">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter your Comment">
-                            <textarea class="input100" name="Comments" placeholder="Your Comments" required></textarea>
+                            <textarea class="input100" name="Comments" placeholder="Your Comments" required="" style="margin-left: -11px;width: 492px;"></textarea>
                             <span class="focus-input100"></span>
                         </div>
 
                     </div>
-
-
-
-
-                    <div class="container-contact100-form-btn">
+                    
+                </form>                
+                <div class="col-lg-9 container-contact100-form-btn">
+                    <a href=".\Pickup Address Inquiry Form.html" style="margin-bottom: 22px;margin-left: 1019px;">
                         <button class="contact100-form-btn">
-                            <span>
-                                <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                            <span>                                
                                 Send
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                             </span>
                         </button>
-                    </div>
-                </form>
+                    </a>                    
+                </div>
             </div>
         </div>
     </div>
+    
     <div id="dropDownSelect1"></div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

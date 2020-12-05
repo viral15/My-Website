@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="/ContactFrom/css/util.css">
     <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    
 
 
     <!--===============================================================================================-->
@@ -115,6 +117,9 @@
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             margin-top: 58px;
+            border-radius: 11px;
+            margin-left: -52px;
+            
         }
 
         .dropdown-content a {
@@ -266,12 +271,12 @@
                     <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="dropdown-content" style="margin-top: 47px;">
-                    <a href=".\movers with truck.html">Packing + Moving + Unpacking</a>
-                    <a href=".\movers with truck.html">Hourly Moving</a>
+                    <a href=".\Pickup Address.html">Packing + Moving + Unpacking</a>
+                    <a href=".\Pickup Address.html">Hourly Moving</a>
                     <a href=".\Fixed price Moving.html">Fixed price moving</a>
                     <a href=".\Packing+Moving.html">Packing +Moving</a>
                     <a href=".\one Mover.html">One Mover</a>
-                    <a href=".\movers with truck P1.html">Interstate Moving</a>
+                    <a href=".\Pickup Address P1.html">Interstate Moving</a>
                 </div>
             </div>
             <a href=".\index.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Home</a>
@@ -297,13 +302,26 @@
     <!--Date and time picker Start=======================================================================================================-->
 
         <div class="container mt-5 mb-5" style="width: 400px">
-            <input type="text" id="picker" class="form-control">            
+            <input type="text" id="picker" class="form-control" style="margin-top: 206px;"> 
+            
+            
+
+
         </div>
       
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="jquery.datetimepicker.full.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.12.1.js" integrity="sha256-VuhDpmsr9xiKwvTIHfYWCIQ84US9WqZsLfR4P7qF6O8=" crossorigin="anonymous"></script> -->
+        <script src="./date and time\jquery.ui.timepicker.js"></script>
+        <link rel="stylesheet" href="./date and time\jquery.ui.timepicker.css">
+        <script src="./date and time\i18n\jquery.ui.timepicker-cs.js"></script>
+
+
+        
+        
         <script>
 
             $('#picker').datetimepicker({ 
@@ -322,18 +340,37 @@
                 allowTimes:['07:00', '08:00', '09:00', '10:00', '11:00 - 13:00', '12:00 - 14:00', '13:00', '14:00', '15:00', '16:00', '17:00']
                                
                 
-            })
-
-            
+            })       
+   
         </script>
+
+      
     <!--Date and time picker End=======================================================================================================-->
         <div class="row">
             <div class="col=md-12">
+                <script>
+                    $("form").submit(function() {
+                        var _txt1 = $('#txt1').val();
+                        var _txt2 = $('#txt2').val();
+                        
+                        if (_txt1 >= _txt2)
+                        {
+                            alert('Matching!');
+                            return true;
+                        }
+                        else
+                        {
+                            alert('Not matching!');
+                            return false;
+                        }
+                    });
+                </script>
                 <a href=".\Type of Pickup Location.html">                
                 <button class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;">
-                    <span>
-                        <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                    
+                    <span>                        
                         NEXT
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                     </span>
                 </button>
                 </a>
@@ -384,14 +421,7 @@
                         </ul>
                     </div>
                 </div>
-                <!--<div class="row bottom-copies">
-
-                    <ul class="list-btm-29 col-lg-5 text-lg-right text-center">-->
-                        <!--<li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li> -->
-                    <!--</ul>
-                </div>-->
+                
             </div>
         </div>
         <!-- move top -->
