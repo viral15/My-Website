@@ -67,24 +67,26 @@
   position: relative;
   display: inline-block; 
   margin: 50px;
-  
+  transition: transform .6s;
   
 }
 .card2 .img-top {
-  display: none;
+  display:inline;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
+  transition: transform .6s;
 }
-.card2:hover .img-top {
-  display:inline;
+.card2:hover .img-top {  
   opacity: 1;
-}
+  transform: scale(1.1);
+  }
 
 .card2:hover .img-bottom {
 display:inline;
 opacity: 0;
+
 }
 
 

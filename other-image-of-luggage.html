@@ -46,76 +46,10 @@
     <!Slider End=====================================================================================-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
-    script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3pRT_Hq6V-pQ0u_oTRSTekaORj7JFfZM&libraries=places&callback=initAutocomplete"></script>
-    <script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3pRT_Hq6V-pQ0u_oTRSTekaORj7JFfZM&libraries=places&callback=initAutocomplete"></script>
 
-        let placeSearch;
-        let autocomplete;
-        const componentForm = {
-        street_number: "short_name",
-        route: "long_name",
-        locality: "long_name",
-        administrative_area_level_1: "short_name",
-        country: "long_name",
-        postal_code: "short_name",
-        };
-
-        function initAutocomplete() {
-        // Create the autocomplete object, restricting the search predictions to
-        // geographical location types.
-        autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById("autocomplete"),
-            { types: ["geocode"] }
-        );
-        // Avoid paying for data that you don't need by restricting the set of
-        // place fields that are returned to just the address components.
-        autocomplete.setFields(["address_component"]);
-        // When the user selects an address from the drop-down, populate the
-        // address fields in the form.
-        autocomplete.addListener("place_changed", fillInAddress);
-        }
-
-        function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        const place = autocomplete.getPlace();
-
-        for (const component in componentForm) {
-            document.getElementById(component).value = "";
-            document.getElementById(component).disabled = false;
-        }
-
-        // Get each component of the address from the place details,
-        // and then fill-in the corresponding field on the form.
-        for (const component of place.address_components) {
-            const addressType = component.types[0];
-
-            if (componentForm[addressType]) {
-            const val = component[componentForm[addressType]];
-            document.getElementById(addressType).value = val;
-            }
-        }
-        }
-
-        // Bias the autocomplete object to the user's geographical location,
-        // as supplied by the browser's 'navigator.geolocation' object.
-        function geolocate() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-            const geolocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-            };
-            const circle = new google.maps.Circle({
-                center: geolocation,
-                radius: position.coords.accuracy,
-            });
-            autocomplete.setBounds(circle.getBounds());
-            });
-        }
-        }
-    </script>
 
 
     <style>
@@ -133,8 +67,8 @@
             z-index: 99999;
             width: 100%;
         }
-  
-        .topnav a {
+
+            .topnav a {
                 float: right;
                 display: block;
                 color: #8c5d18;
@@ -142,17 +76,17 @@
                 padding: 16px 18px;
                 text-decoration: none;
                 font-size: 16px;
-                font-family:'DIN Next';
+                font-family: 'DIN Next';
             }
 
-        /* .active {
+            /* .active {
             background-color: #4CAF50;
             color: white;
         }*/
 
-        .topnav .icon {
-            display: none;
-        }
+            .topnav .icon {
+                display: none;
+            }
 
         .dropdown {
             float: right;
@@ -160,7 +94,7 @@
             padding-top: 3px;
         }
 
-        .dropdown .dropbtn {
+            .dropdown .dropbtn {
                 float: right;
                 display: block;
                 color: #8c5d18;
@@ -168,13 +102,11 @@
                 padding: 16px 18px;
                 text-decoration: none;
                 font-size: 16px;
-                font-family:'DIN Next';
-                margin-top:-4px;
-                
+                font-family: 'DIN Next';
+                margin-top: -4px;
             }
 
         .dropdown-content {
-            
             display: none;
             position: fixed;
             background-color: #0F495B;
@@ -186,7 +118,7 @@
             margin-left: -52px;
         }
 
-        .dropdown-content a {
+            .dropdown-content a {
                 float: none;
                 color: #D69B88;
                 padding: 12px 16px;
@@ -198,11 +130,10 @@
 
         .topnav a:hover, .dropdown:hover .dropbtn {
             background-color: #5FA4A3;
-            color:#0F495B;
+            color: #0F495B;
         }
 
         .dropdown-content a:hover {
-            
             background-color: #5FA4A3;
             color: #0F495B;
         }
@@ -288,7 +219,7 @@
 
             .topnav.responsive {
                 position: relative;
-                width:100%!important;
+                width: 100% !important;
             }
 
                 .topnav.responsive .icon {
@@ -322,10 +253,10 @@
 <body>
 
     <!--<img src="assets/images/logo.jpg">-->
-    <div class="w3-container" style="overflow: hidden;background-color: #F8F5EE;position: fixed;top: 0;z-index: 99999;width: 100%;height: 75px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);">        
+    <div class="w3-container" style="overflow: hidden;background-color: #F8F5EE;position: fixed;top: 0;z-index: 99999;width: 100%;height: 75px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);">
         <div class="topnav mainresponsivtop" id="myTopnav" style="width: 685px;margin-left: 340px;border-radius: 10px;box-shadow: 0px 1px 10px -2px rgba(50, 50, 50, 1);height: 50px;">
             <!-- <img src="assets/images/logo5.svg" style="height: 60px; width: 100px;"> -->
-            
+
             <a href=".\Login form for Client.html" class="active" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Login</a>
             <a href="#news" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Contact</a>
             <a href=".\Login form for Mover.html" style="border: 0.5px solid black;border-color: #9ea29e;border-left: thick;border-top: thick;border-bottom: thick;width: 137px;">Movers</a>
@@ -347,101 +278,93 @@
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick=" myFunction();">&#9776;</a>
         </div>
         <div style="margin-top: -30px;margin-left: 1138px;">
-        <a href="#javascript;" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#javascript;" class="twitter" style="margin-left: 15px;"><i class="fa fa-twitter"></i></a>
-        <a href="#javascript;" class="instagram" style="margin-left: 15px;"><i class="fa fa-instagram"></i></a>
-        <a href="#javascript;" class="google-plus" style="margin-left: 15px;"><i class="fa fa-google-plus"></i></a>
-        <a href="#javascript;" class="linkedin" style="margin-left: 15px;"><i class="fa fa-linkedin"></i></a>
+            <a href="#javascript;" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#javascript;" class="twitter" style="margin-left: 15px;"><i class="fa fa-twitter"></i></a>
+            <a href="#javascript;" class="instagram" style="margin-left: 15px;"><i class="fa fa-instagram"></i></a>
+            <a href="#javascript;" class="google-plus" style="margin-left: 15px;"><i class="fa fa-google-plus"></i></a>
+            <a href="#javascript;" class="linkedin" style="margin-left: 15px;"><i class="fa fa-linkedin"></i></a>
         </div>
     </div>
     <!--JS for stick Manubar start=================================================================================-->
-
     <!--JS for stick Manubar End===================================================================================-->
 
-  
-    
-    <!--============================================================================================================-->
-    
+
     <div class="container-fluid" style="background-color=#fff;">
-            <h2 class="a" style="margin-left: 55px;padding: 34px 391px;font-weight: bold;color: #00315f;text-align: 17px;margin-top: 60px;"> ENTER DROPOFF ADDRESS</h2>
-                <div class="row">
-            <div class="col-md-12" style="text-align: center;">
-                
+        <h2 class="a" style="margin-left: 55px; padding: 34px 391px; font-weight: bold; color: #00315f; margin-top: 60px;"> Other Luggage Images</h2>
+    </div>
+    <div class="row" style="width:100%">
+        <div class="col-sm-4">
+            <div style="width: 170px; float: right;">
+                <!-- <img src=".\assets\images\bw moving + packing + unpacking.png" alt="Card1 Back" style="width:143%" class="img-bottom"> -->
+                <img src="./assets/images/bed1.jpg" style="width: 100%;">
             </div>
-        </div> 
-        
-    </div>
-
-
-    <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Pickup Address">
-        <input class="input100 pac-target-input" type="text" id="autocomplete" name="Your Pickup address" placeholder="Your DropOff address" onfocus="geolocate()" required="" autocomplete="off" style="width: 518px;margin-left: 402px;margin-top: 29px;">
-        
-        <span class="focus-input100"></span>
-    </div>
-
-  
-        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">                                
-            <input class="input100" disabled="true" id="postal_code" name="postal_code" placeholder="Zip Code" style="width: 218px;margin-left: 402px;margin-bottom: 11px;">
-            <!-- <span class="focus-input100"></span> -->                                
         </div>
-    
-    <!--Start Hidden Table for address pickup===========================================================================================-->
+        <div class="col-sm-5">
+            <div style="width:470px; float:left;">
+                <label>The Bed is well supported by a Metal Frame structure that makes this bed super strong and durable. The wood panels are made from 18mm Engineered Wood boards that offer superior strength to the overall construction.</label>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <button style="height: 25px; width: 25px; background-color: #d7e9ea; margin-top: 35px"><span>X</span></button>
+        </div>
 
-    <table id="address" style="display:none;">
-        <tr>
-          <td class="label">Street address</td>
-          <td class="slimField">
-            <input class="field" id="street_number" disabled="true" />
-          </td>
-          <td class="wideField" colspan="2">
-            <input class="field" id="route" disabled="true" />
-          </td>
-        </tr>
-        <tr>
-          <td class="label">City</td>
-          <td class="wideField" colspan="3">
-            <input class="field" id="locality" disabled="true" />
-          </td>
-        </tr>
-        <tr>
-          <td class="label">State</td>
-          <td class="slimField">
-            <input
-              class="field"
-              id="administrative_area_level_1"
-              disabled="true"
-            />
-          </td>
-          <td class="label">Zip code</td>
-          <td class="wideField">
-            <input class="field" id="postal_code" disabled="true" />
-          </td>
-        </tr>
-         <tr>
-          <td class="label">Country</td>
-          <td class="wideField" colspan="3">
-            <input class="field" id="country" disabled="true"/>
-          </td>
-        </tr>
-    </table>
-    
+    </div>
+    <div class="row" style="width:100%">
+        <div class="col-sm-4">
+            <div style="width: 170px; float: right;">
+                <img src="./assets/images/bed1.jpg" style="width: 100%;">
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div style="width:470px; float:left;">
+                <label>The Bed is well supported by a Metal Frame structure that makes this bed super strong and durable. The wood panels are made from 18mm Engineered Wood boards that offer superior strength to the overall construction.</label>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <button style="height: 25px; width: 25px; background-color: #d7e9ea; margin-top: 35px;"><span style="">X</span></button>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-5 wrap-input100 validate-input" style="top: 35px;">
+            <input class="pac-target-input" type="file" id="autocomplete" style="margin-left: 260px;">
+        </div>
+        <div class="col-lg-4 wrap-input100 validate-input">
+            <textarea class="input100" placeholder="Discription" rows="4" cols="50"></textarea>
+        </div>
+        <div class="col-lg-1 wrap-input100 validate-input" style="margin-top: 38px;">
+            <button style="height: 25px; width: 70px; background-color: #e2e8f0 ; font-size: 20px; padding-bottom: 28px;"><span>+ Add</span></button>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-lg-5 wrap-input100 validate-input" style="top: 35px;">
+            <input class="pac-target-input" type="file" id="autocomplete" style="margin-left: 260px;">
+        </div>
+        <div class="col-lg-4 wrap-input100 validate-input">
+            <textarea class="input100" placeholder="Discription" rows="4" cols="50"></textarea>
+        </div>
+        <div class="col-lg-1 wrap-input100 validate-input" style="margin-top: 38px;">
+            <button style="height:25px;width:25px; background-color:red;"><span style="">X</span></button>
+        </div>
+    </div>-->
+
     <div class="row">
         <div class="col=md-12">
-            <a href=".\movers with truck P1.html">
-            <button class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;">
-                <span>                    
-                    NEXT
-                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                </span>
-            </button>
+            <a href="#javascript();">
+               
+                    <span class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;" >
+                        NEXT
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </span>
+                
             </a>
         </div>
-    </div> 
-       
-           
-           
-    <!--End Image Box=============================================================================================-->
+    </div>
 
+    <!--Start Hidden Table for address pickup===========================================================================================-->
+    <!--End Image Box=============================================================================================-->
     <!-- footer ------------------------------------------------------------------------------------------->
     <footer class="w3l-footer">
         <div class="footer-29 py-5" style="background-color: #00315F;">
@@ -487,10 +410,10 @@
                 <!--<div class="row bottom-copies">
 
                     <ul class="list-btm-29 col-lg-5 text-lg-right text-center">-->
-                        <!--<li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li> -->
-                    <!--</ul>
+                <!--<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li> -->
+                <!--</ul>
                 </div>-->
             </div>
         </div>
@@ -620,22 +543,22 @@
     <!--navbar js script end-->
     <!--Plus and minus button start===================================================================================-->
     <script>
-        $(document).ready(function() {
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 0 ? 0 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
-		});
+        $(document).ready(function () {
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 0 ? 0 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                return false;
+            });
+        });
     </script>
     <!--Plus and minus button End=====================================================================================-->
 
