@@ -156,5 +156,17 @@ img.vert-move {
       font-size: medium;
     }
 
+    p.ex1 {
+      color: rgb(14, 13, 13);
+      font-size: medium;
+      font-family: 'Open Sans';
+    }
+
+    p.ex2 {
+      color: rgb(250, 249, 249);
+      font-size: larger;
+      font-family: 'Ubuntu-Bold';
+    }
+
  
   

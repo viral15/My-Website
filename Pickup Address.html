@@ -10,7 +10,7 @@
     <!-- Google online fonts -->
     <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -38,37 +38,39 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
-    <!--Slider-------------------------------------------------------------------------------------------
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!Slider End=====================================================================================-->
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
-    script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3pRT_Hq6V-pQ0u_oTRSTekaORj7JFfZM&libraries=places&callback=initAutocomplete"></script>
+    
     <script>
-
-        let placeSearch;
+     
+     let placeSearch;
         let autocomplete;
         const componentForm = {
         street_number: "short_name",
         route: "long_name",
         locality: "long_name",
         administrative_area_level_1: "short_name",
-        country: "long_name",
+        country: "IN",
         postal_code: "short_name",
         };
 
         function initAutocomplete() {
+            debugger
         // Create the autocomplete object, restricting the search predictions to
         // geographical location types.
         autocomplete = new google.maps.places.Autocomplete(
             document.getElementById("autocomplete"),
-            { types: ["geocode"] }
-        );
+            {                 
+                types: ['geocode'],
+                types: ['establishment'],               
+                componentRestrictions: {'country' : ['AU']},                
+                //fields: ['place_id', 'geometry', 'name', 'vicinity'] 
+            });
+        
         // Avoid paying for data that you don't need by restricting the set of
         // place fields that are returned to just the address components.
         autocomplete.setFields(["address_component"]);
@@ -78,6 +80,7 @@
         }
 
         function fillInAddress() {
+            debugger
         // Get the place details from the autocomplete object.
         const place = autocomplete.getPlace();
 
@@ -362,7 +365,7 @@
     
     <!--============================================================================================================-->
     
-    <div class="container-fluid" style="background-color=#fff;">
+    <div class="container-fluid" style="background-color: #fff;">
             <h2 class="a" style="margin-left: 55px;padding: 34px 391px;font-weight: bold;color: #00315f;text-align: 17px;margin-top: 60px;"> ENTER PICKUP ADDRESS</h2>
                 <div class="row">
             <div class="col-md-12" style="text-align: center;">
@@ -474,7 +477,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
+                    <!-- <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
                         <h6 class="footer-title-29">Subscribe email notification</h6>
                         <p>Get update our notification for best offer and new upcoming features .</p>
                         <form action="#" method="post" class="rightside-form mt-4">
@@ -482,7 +485,7 @@
                             <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
                         </form>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 <!--<div class="row bottom-copies">
 
@@ -568,44 +571,7 @@
     </script>
     <!-- //script for teams1-->
 
-    <script>
-
-
-
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-            $('.popup-with-move-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-slide-bottom'
-            });
-        });
-    </script>
+   
     <!--navbar js script start-->
     <script>
         function myFunction() {
@@ -618,26 +584,7 @@
         }
     </script>
     <!--navbar js script end-->
-    <!--Plus and minus button start===================================================================================-->
-    <script>
-        $(document).ready(function() {
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 0 ? 0 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
-		});
-    </script>
-    <!--Plus and minus button End=====================================================================================-->
+  
 
 
 </body>

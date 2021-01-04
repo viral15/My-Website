@@ -50,6 +50,7 @@
     <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3pRT_Hq6V-pQ0u_oTRSTekaORj7JFfZM&libraries=places&callback=initAutocomplete"></script>
     <script>
+        
 
         let placeSearch;
         let autocomplete;
@@ -62,13 +63,28 @@
         postal_code: "short_name",
         };
 
+        // var defaultBounds = new google.maps.latlngBounds(
+        //     new google.maps.LatLng(-33.8902, 151.1759),
+        //     new google.maps.LatLng(-33.8474, 151.2631));
+        
+        // var option = {
+        //     bounds: defaultBounds
+        // };
+        var options = {
+          componentRestrictions: {country: 'aus'}
+        };
+
         function initAutocomplete() {
         // Create the autocomplete object, restricting the search predictions to
         // geographical location types.
         autocomplete = new google.maps.places.Autocomplete(
             document.getElementById("autocomplete"),
-            { types: ["geocode"] }
-        );
+            {                 
+                types: ['geocode'],
+                types: ['establishment'],               
+                componentRestrictions: {'country' : ['AU']},                
+                //fields: ['place_id', 'geometry', 'name', 'vicinity'] 
+            });
         // Avoid paying for data that you don't need by restricting the set of
         // place fields that are returned to just the address components.
         autocomplete.setFields(["address_component"]);
@@ -362,16 +378,20 @@
     
     <!--============================================================================================================-->
     
-    <div class="container-fluid" style="background-color=#fff;">
+    <div class="container-fluid" style="background-color: #fff;">
             <h2 class="a" style="margin-left: 55px;padding: 34px 391px;font-weight: bold;color: #00315f;text-align: 17px;margin-top: 60px;"> ENTER PICKUP ADDRESS</h2>
-                <div class="row">
-            <div class="col-md-12" style="text-align: center;">
+            <div class="row">
+               <div class="col-md-12" style="text-align: center;"> </div>
                 
-            </div>
-        </div> 
-        
+            
+            </div>         
     </div>
 
+
+
+
+
+    
 
     <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Pickup Address">
         <input class="input100 pac-target-input" type="text" id="autocomplete" name="Your Pickup address" placeholder="Your Pickup address" onfocus="geolocate()" required="" autocomplete="off" style="width: 518px;margin-left: 402px;margin-top: 29px;">
@@ -474,7 +494,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
+                    <!-- <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
                         <h6 class="footer-title-29">Subscribe email notification</h6>
                         <p>Get update our notification for best offer and new upcoming features .</p>
                         <form action="#" method="post" class="rightside-form mt-4">
@@ -482,7 +502,7 @@
                             <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
                         </form>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 <!--<div class="row bottom-copies">
 

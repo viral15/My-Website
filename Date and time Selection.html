@@ -26,13 +26,12 @@
     <link rel="stylesheet" type="text/css" href="\ContactFrom\css\main.css">
     <link rel="stylesheet" type="text/css" href="/ContactFrom/css/util.css">
     <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href=".\assets\css\date-and-time.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
     
     
     
-
-
     <!--===============================================================================================-->
     <!-- <link rel="icon" type="image/png" href="/images/icons/favicon.ico" /> -->
     <!--===============================================================================================-->
@@ -317,9 +316,9 @@
         border: none;
         cursor: pointer;
         border-radius: 9px;
-        }      
-        
+        }
 
+    
     </style>
 </head>
 <body>
@@ -372,72 +371,100 @@
         <div class="col-md-12" style="text-align: center;">            
         </div>
     </div> 
+    <div class="row">
+        <div class="col-md-7" style="margin-left: -15%;">
 
-        <div class="container mt-5 mb-5" style="width: 400px;margin-left: 530px;">
-            <input type="text" id="picker" class="form-control">            
+            <div class="container mt-5 mb-5" style="width: 400px;margin-left: 530px;">
+                <input type="text" id="picker" class="form-control" required>            
+            </div>
         </div>
 
-
-        <label class="contact100-form-title" for="cars">Select Time</label>
-        <form action="/action_page.php">
-            <div class="dropdown1">
-            
-                <select class="dropbtn1" name="cars" id="cars" style="margin-left: 610px;/* -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.46); *//* box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.46); */-webkit-box-shadow: 15px 13px 15px -8px rgba(0,0,0,0.64);box-shadow: 15px 13px 15px -8px rgba(0,0,0,0.64);">
-                    <option class="droplist1" value="07:00 to 08:00">07:00 To 08:00</option>
-                    <option class="droplist1" value="08:00 to 09:00">08:00 To 09:00</option>
-                    <option class="droplist1" value="09:00 to 10:00">09:00 To 10:00</option>
-                    <option class="droplist1" value="10:00 to 11:00">10:00 To 11:00</option>
-                    <option class="droplist1" value="11:00 to 12:00">11:00 To 12:00</option>
-                    <option class="droplist1" value="12:00 to 13:00">12:00 To 13:00</option>
-                    <option class="droplist1" value="13:00 to 14:00">13:00 To 14:00</option>
-                    <option class="droplist1" value="14:00 to 15:00">14:00 To 15:00</option>
-                    <option class="droplist1" value="15:00 to 16:00">15:00 To 16:00</option>
-                    <option class="droplist1" value="16:00 to 17:00">16:00 To 17:00</option>
-                    <option class="droplist1" value="17:00 to 18:00">17:00 To 18:00</option>  
-                </select>
-
-            </div>        
-        </form>
-      
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="jquery.datetimepicker.full.min.js"></script>
-        <script>
-
-            $('#picker').datetimepicker({ 
-                timepicker: false,
-                datepicker: true,
-                format: 'y-m-d H:mm',
-                //value: '2019-8-1 09:30',
-                hours12: false,
-                step: 30,
-                yearstart: 2020,
-                yearEnd: 3050,
-                inline: true, 
-                startDate: '+1d',              
-                minDate: '+1970/01/02',   //disable past date                   
-                //maxDate: '+1M',
-                allowTimes:['07:00', '08:00', '09:00', '10:00', '11:00 - 13:00', '12:00 - 14:00', '13:00', '14:00', '15:00', '16:00', '17:00']
-                               
+       
+        <!-- <label class="contact100-form-title" for="cars">Select Time</label> -->
+        <div class="col-md-5">
+            <form action="/action_page.php">
+                <div class="dropdown1">
                 
-            })
+                    <select class="dropbtn1" name="cars" id="cars" style="margin-top: 146px;margin-left: 265px;/* -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.46); *//* box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.46); */-webkit-box-shadow: 15px 13px 15px -8px rgba(0,0,0,0.64);box-shadow: 15px 13px 15px -8px rgba(0,0,0,0.64);">
+                        <option class="droplist1" value="07:00 to 08:00">07:00 To 08:00</option>
+                        <option class="droplist1" value="08:00 to 09:00">08:00 To 09:00</option>
+                        <option class="droplist1" value="09:00 to 10:00">09:00 To 10:00</option>
+                        <option class="droplist1" value="10:00 to 11:00">10:00 To 11:00</option>
+                        <option class="droplist1" value="11:00 to 12:00">11:00 To 12:00</option>
+                        <option class="droplist1" value="12:00 to 13:00">12:00 To 13:00</option>
+                        <option class="droplist1" value="13:00 to 14:00">13:00 To 14:00</option>
+                        <option class="droplist1" value="14:00 to 15:00">14:00 To 15:00</option>
+                        <option class="droplist1" value="15:00 to 16:00">15:00 To 16:00</option>
+                         
+                    </select>
 
-            
-        </script>
+                </div>        
+            </form>
+        
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script src="jquery.datetimepicker.full.min.js"></script>
+            <script>
+
+                $('#picker').datetimepicker({ 
+                    timepicker: false,
+                    datepicker: true,
+                    format: 'y-m-d H:mm',
+                    //value: '2019-8-1 09:30',
+                    hours12: false,
+                    step: 30,
+                    yearstart: 2020,
+                    yearEnd: 3050,
+                    inline: true, 
+                    startDate: '+2d',              
+                    minDate: '+1970/01/03',   //disable past date                   
+                    //maxDate: '+1M',
+                    allowTimes:['07:00', '08:00', '09:00', '10:00', '11:00 - 13:00', '12:00 - 14:00', '13:00', '14:00', '15:00', '16:00', '17:00']
+                                
+                    
+                })
+
+                
+            </script>
+        </div>
+    </div>
     <!--Date and time picker End=======================================================================================================-->
-        <div class="row" style="margin-top: 94px;">
+    <div class="row" style="margin-top: 94px;">
+        
             <div class="col=md-12">
                 <a href=".\Address.html">
-                <button class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;">
+                    <button class="contact10022-form-btn" style="margin-top: -38px;width: 240px;margin-left: 360px;/* margin-bottom: 70px; */margin-right: 12px;">
+                    <span class="myDIV1">
+                        <span style="text-decoration: underline;">                        
+                            +
+                                
+                        </span>
+                        <span>                        
+                            1 day & Save $50
+                            
+                        </span>
+                    </span>
+                </button>
+                </a>
+                <a href=".\Address.html">
+                <button class="contact10022-form-btn" style="margin-top: -63px;width: 240px;margin-left: 803px;margin-bottom: 70px;">
                     <span>                        
-                        NEXT
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        No,Thanks!
+                        
                     </span>
                 </button>
                 </a>
             </div>
-        </div>
+            <!-- <a class="hide10022" style="text-decoration: underline;">                        
+               We will book your job for + or - one day variation, according to your selected date
+                    
+            </a> -->
+       
+            
+        
+        
+    </div>
 
     <!--End Image Box=============================================================================================-->
 
@@ -473,7 +500,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
+                    <!-- <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
                         <h6 class="footer-title-29">Subscribe email notification</h6>
                         <p>Get update our notification for best offer and new upcoming features .</p>
                         <form action="#" method="post" class="rightside-form mt-4">
@@ -481,7 +508,7 @@
                             <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
                         </form>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 
             </div>
