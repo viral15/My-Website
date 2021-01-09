@@ -66,8 +66,12 @@
             document.getElementById("autocomplete"),
             {                 
                 types: ['geocode'],
-                types: ['establishment'],               
-                componentRestrictions: {'country' : ['AU']},                
+                
+                types: [],               
+                componentRestrictions: {country : ['AU']}, 
+                // bounds: new google.maps.LatLngBounds(
+                //     new google.maps.LatLng(37.4713, 144.7852)
+                // )               
                 //fields: ['place_id', 'geometry', 'name', 'vicinity'] 
             });
         
@@ -116,16 +120,7 @@
             }
         }
 
-        function myFunction(){
-            var x = document.getElementById("administrative_area_level_1").innerText;
-            var y = "victoria";          
-            if (x = "victoria") {
-                greeting = "Good morning";
-                
-               } else  {
-                   alert ("wrong");
-               }
-           }
+        
     </script>
 
 
@@ -436,15 +431,66 @@
           </td>
         </tr>
     </table>
+    <!--==============//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     
+    <div class="col-lg-12 wrap-input100 validate-input" data-validate="Please enter Your Pickup Address">
+        <input class="input100 pac-target-input" onchange="myFunction()" type="text" id="autocomplete" name="Your Pickup address" placeholder="Your Pickup address" onfocus="geolocate()" required="" autocomplete="off" style="width: 518px;margin-left: 402px;margin-top: 29px;">
+        
+        <span class="focus-input100"></span>
+    </div>
+
+  
+        <div class="col-lg-6 wrap-input100 validate-input" data-validate="Please Select Time">                                
+            <input class="input100" disabled="true" id="postal_code" name="postal_code" placeholder="Zip Code" style="width: 218px;margin-left: 402px;margin-bottom: 11px;">
+            <!-- <span class="focus-input100"></span> -->                                
+        </div>
     
-    
+    <!--Start Hidden Table for address pickup===========================================================================================-->
+
+    <table id="address" >
+        <tr>
+          <td class="label">Street address</td>
+          <td class="slimField">
+            <input class="field" id="street_number" disabled="true" />
+          </td>
+          <td class="wideField" colspan="2">
+            <input class="field" id="route" disabled="true" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">City</td>
+          <td class="wideField" colspan="3">
+            <input class="field" id="locality" disabled="true" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">State</td>
+          <td class="slimField">
+            <input
+              class="field"
+              id="administrative_area_level_1"
+              disabled="true"
+            />
+     
+          </td>
+          <td class="label">Zip code</td>
+          <td class="wideField">
+            <input class="field" id="postal_code" disabled="true" />
+          </td>
+        </tr>
+         <tr>
+          <td class="label">Country</td>
+          <td class="wideField" colspan="3">
+            <input class="field" id="country" disabled="true"/>
+          </td>
+        </tr>
+    </table>
 
     
     <div class="row">
         <div class="col=md-12">
             
-            <a onclick="myFunction()" class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;">
+            <a onclick="addr()" class="contact100-form-btn" style="margin-top: 50px; width: 240px; margin-left: 570px; margin-bottom: 70px;">
                 <span>                    
                     NEXT
                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -457,18 +503,30 @@
     </div> 
     
     <script>
-        function myFunction(){
-            debugger;
-            var x = document.getElementById("administrative_area_level_1").innerText;
-            var y = "victoria";     
-            alert(x);     
-            if (x == "victoria") {
-                greeting = "Good morning";
-                
-               } else  {
-                   alert ("wrong");
-               }
-           }
+        let addr = async () => {
+            
+            var x = await document.getElementById("administrative_area_level_1").value;
+            var y = "Victoria";
+            // Check the type of elements 
+
+            // check value
+
+            let allowedState = ["Victoria", "New South Wales", "South Australia"]
+
+            let kl = allowedState.map((el) => {
+                return x === el
+            })
+
+            kl
+
+            if (kl[0] === true || kl[1] === true || kl[2] === true) {
+                // greeting = "Good morning";
+                location.replace("./Dropoff Address.html")
+
+            } else {
+                alert("Our Service Is not Enable In Selected region");
+            }
+        }
     </script>
            
     <!--End Image Box=============================================================================================-->
