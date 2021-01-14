@@ -390,7 +390,7 @@ textarea.input1001add {
 }
 
 
-.container-contact1110 {
+.container-contact11102 {
 	width: 100%;
 	min-height: 100vh;
 	display: -webkit-box;
@@ -406,7 +406,7 @@ textarea.input1001add {
 	background-color: #B2A2B8;
 }
 
-.wrap-contact1110 {
+.wrap-contact11102 {
   width: 550px;
   background: transparent;
   padding: 50px 0px 54px 0px;
@@ -672,7 +672,7 @@ textarea.input1001add {
 
 /*------Round age End------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----Slider Button Start-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.container-contact1110 {
+.container-contact11102 {
 	width: 100%;
 	min-height: 100vh;
 	display: -webkit-box;
@@ -688,7 +688,7 @@ textarea.input1001add {
 	background-color: #B2A2B8;
 }
 
-.wrap-contact1110 {
+.wrap-contact11102 {
   width: 550px;
   background: transparent;
   padding: 50px 0px 54px 0px;
@@ -696,12 +696,12 @@ textarea.input1001add {
   margin-left: -103px;
 }
 
-.contact1110-form {
+.contact11102-form {
   width: 77%;
   margin-left: 27%;
 }
 
-.contact1110-form-title {
+.contact11102-form-title {
   display: block;
   font-family: Ubuntu-Bold;
   font-size: 30px;
@@ -712,7 +712,7 @@ textarea.input1001add {
   padding-bottom: 49px;
 }
 
-.container-contact1110-form-btn {
+.container-contact11102-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -723,7 +723,7 @@ textarea.input1001add {
   padding-top: 10px;
 }
 
-.contact1110-form-btn {
+.contact11102-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -751,7 +751,7 @@ textarea.input1001add {
   z-index: 1;
 }
 
-.contact1110-form-btn::before {
+.contact11102-form-btn::before {
   content: "";
   display: block;
   position: absolute;
@@ -777,7 +777,7 @@ textarea.input1001add {
   box-shadow: 5px 5px 15px 2px #000000;
 }
 
-	.contact1110-form-btn:hover:before {
+	.contact11102-form-btn:hover:before {
 		background-color: #0F495B;
     /* width: calc(100% + 20px); */
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
